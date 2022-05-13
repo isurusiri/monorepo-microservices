@@ -17,7 +17,7 @@ import (
 
 func init() {
 	viper.AddConfigPath("config")
-	viper.AddConfigPath("config")
+	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 
 	if err := viper.ReadInConfig(); err != nil {
@@ -26,7 +26,7 @@ func init() {
 }
 
 func main() {
-	var mongoURI = viper.GetString("databse.mongoConnectionString")
+	var mongoURI = viper.GetString("database.mongoConnectionString")
 	dialInfo, err := mgo.ParseURL(mongoURI)
 	if err != nil {
 		panic(err)

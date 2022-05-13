@@ -7,12 +7,12 @@ import (
 )
 
 type (
-	// Behaviour represents the model of behaviour database entity.
-	Behaviour struct {
+	// Activity represents the model of activity database entity.
+	Activity struct {
 		ID         bson.ObjectId `bson:"_id,omitempty" json:"id"`
 		Name       string        `json:"name"`
 		Type       string        `json:"type"`
-		Confidence string        `json:"confidence"`
-		CreatedOn  time.Time     `json:"createdOn,omitempty"`
+		DetectedOn time.Time     `json:"detectedOn"`
+		CreatedOn  time.Time     `json:"createdOn"`
 	}
 )
