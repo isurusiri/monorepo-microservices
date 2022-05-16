@@ -1,4 +1,4 @@
-package storage
+package mongodb
 
 import (
 	"github.com/isurusiri/monorepo-microservices/insight/model"
