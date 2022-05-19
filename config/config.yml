@@ -1,0 +1,5 @@
+databse:
+  mongoConnectionString: ""
+  mongoDbName: "demo"
+server:
+  port: "8080"
